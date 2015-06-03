@@ -2,10 +2,21 @@
 @section('content')
 	<h2>Nombre: {{$movie->nombre}}</h2>
 	<h2>Descripcion: {{$movie->descripcion}}</h2>
+	<h2>Categoria: {{$movie->category}}</h2>
+	<h2>Reviews:</h2>
 	@foreach ($movie->reviews as $review)
 			{{$review->content}}
-			<br>
+			<h2>likes:{{$review->likes->count()}}</h2> 
+			<!--like-->
+		{!! Form::open(['url'=>'likes']) !!}
+		{!! Form::hidden('review_id', $review->id) !!}
+		{!! Form::submit('Like',['class' => 'btn btn-primary']) !!}
+		{!! Form::close() !!}
+		<br>
 	@endforeach
+
+
+
 		{!! Form::open(['url'=>'reviews']) !!}
 		<br>
 		{!! Form::label('name','review:') !!}
@@ -15,10 +26,12 @@
 		{!! Form::submit('Guardar',['class' => 'btn btn-primary']) !!}
 		{!! Form::close() !!}
 
+
+		<br>
 		{!! Form::open(['url'=>'ratings']) !!}
 		<br>
 		{!! Form::label('name','rating:') !!}
-		{!! Form::text('value', null,['class' => 'form-control']) !!}
+		{!! Form::text('valor',null,['class' => 'form-control']) !!}
 		{!! Form::hidden('movie_id', $movie->id) !!}
 		<br><br>
 		{!! Form::submit('Guardar',['class' => 'btn btn-primary']) !!}

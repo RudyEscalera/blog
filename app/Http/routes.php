@@ -16,6 +16,7 @@ Route::get('home', 'HomeController@index');
 Route::resource('articles','ArticlesController');
 Route::resource('movies','MoviesController');
 Route::resource('reviews','ReviewsController');
+Route::resource('likes','LikesController');
 Route::resource('ratings','RatingsController');
 Route::controllers([
 	'auth' => 'Auth\AuthController',

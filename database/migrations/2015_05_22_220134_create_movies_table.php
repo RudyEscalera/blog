@@ -17,6 +17,7 @@ class CreateMoviesTable extends Migration {
 			$table->increments('id');
 			$table->string('nombre');
 			$table->text('descripcion');
+			$table->string('category')->default('comedia');
 			$table->timestamps();
 		});
 	}

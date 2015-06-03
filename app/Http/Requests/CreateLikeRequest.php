@@ -2,7 +2,7 @@
 
 use App\Http\Requests\Request;
 
-class CreateRatingRequest extends Request {
+class CreateLikeRequest extends Request {
 
 	/**
 	 * Determine if the user is authorized to make this request.
@@ -22,7 +22,7 @@ class CreateRatingRequest extends Request {
 	public function rules()
 	{
 		return [
-			'valor'=>'required|integer|between:1,10'
+			'user_id' => 'unique'
 		];
 	}
 

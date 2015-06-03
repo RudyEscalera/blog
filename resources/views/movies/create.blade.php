@@ -8,6 +8,11 @@
 </div>
 {!! Form::label('descripcion', 'critica:') !!}
 {!! Form::textarea('descripcion', null, ['class' => 'form-control']) !!}
+{!! Form::label('category', 'Category:') !!}
+{!! Form::select('animal', array(
+    'comedia' => 'Comedia',
+    'drama' => 'Drama','terror'=>'Terror')
+); !!}
 <br>
 {!! Form::submit('Guardar', ['class' => 'btn btn-primary form-control']) !!}
 {!! Form::close() !!}

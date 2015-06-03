@@ -4,7 +4,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Movie extends Model {
 
-	protected $fillable = ['nombre','descripcion'];
+	protected $fillable = ['nombre','descripcion','category'];
 	public function reviews()
 	{
 		return $this->hasMany('App\Review');
