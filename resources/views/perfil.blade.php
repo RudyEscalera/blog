@@ -7,7 +7,6 @@
 
 
     {!! Form::open(array('route' => 'posts.store', 'method'=>'post')) !!}
-    {{--@include('movies.partials.form')--}}
 
     {!! Form::hidden('user_id',  Auth::id()) !!}
     <div class="form-group">
