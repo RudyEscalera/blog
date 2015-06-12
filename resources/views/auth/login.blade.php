@@ -30,6 +30,7 @@
             background-color: #f7ecb5;
         }</style>
 </head>
+<body>
 <div id="iniciar_secion">
 					@if (count($errors) > 0)
 						<div class="alert alert-danger">
@@ -78,4 +79,5 @@
 						</div>
 					</form>
 	</div>
+	</body>
 @endsection
