@@ -23,6 +23,7 @@ Route::resource('reviews','ReviewsController');
 Route::resource('likes','LikesController');
 Route::resource('ratings','RatingsController');
 Route::resource('posts','PostsController');
+Route::resource('idols','IdolsController');
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
