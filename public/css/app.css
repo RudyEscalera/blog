@@ -6,6 +6,9 @@ html {
 }
 body {
   margin: 0;
+  background-image: url("rino.jpg");
+            background-size: cover;
+            background-repeat: repeat;
 }
 article,
 aside,

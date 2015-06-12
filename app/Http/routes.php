@@ -1,4 +1,6 @@
 <?php
+use Auth;
+use User;
 
 /*
 |--------------------------------------------------------------------------
@@ -11,13 +13,20 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'WelcomeController@index');
 Route::get('home', 'HomeController@index');
+Route::get('/{id}', function ($id) {
+   		 $user = \DB::table('users')->where('username' ,$id)->get();
+   		 return $user;
+		/*$data = ['mensaje' => 'probando perfil'];
+		return view('contact', $data);*/
+});
 Route::resource('articles','ArticlesController');
 Route::resource('movies','MoviesController');
 Route::resource('reviews','ReviewsController');
 Route::resource('likes','LikesController');
 Route::resource('ratings','RatingsController');
+Route::resource('posts','PostsController');
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',

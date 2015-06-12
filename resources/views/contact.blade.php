@@ -3,5 +3,7 @@
 @section('title', 'Hola mundo')
 
 @section('content')
-    <p>{{$mensaje}}</p>
+	<div class="fondoguest">
+		<p>{{$mensaje}}</p>
+		</div>
 @stop

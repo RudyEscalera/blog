@@ -1,4 +1,5 @@
 <?php namespace App\Http\Controllers;
+use Auth;
 
 class HomeController extends Controller {
 
@@ -30,8 +31,16 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
-		$data = ['mensaje' => 'Hola mundo prueba'];
+		$user = Auth::user()->name;
+		$data = ['mensaje' => 'esta en el index de home'];
 		return view('contact', $data);
+	}
+	public function perfil($id)
+	{
+		$user = Auth::find($id);
+		$data = ['mensaje' => $user()->name];
+		return view('contact', $data);
+
 	}
 
 }

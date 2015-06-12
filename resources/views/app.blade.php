@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Laravel</title>
+	<title>Twiter</title>
 
 	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 
@@ -52,11 +52,6 @@
 			</div>
 		</div>
 	</nav>
-	<div class="container-fluid">
-	<div class="row">
-		<div class="col-md-8 col-md-offset-2">
-			<div class="panel panel-default">
-				<div class="panel-body">
 	@yield('content')
 	</div>
 	</div>
