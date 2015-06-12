@@ -32,7 +32,7 @@ class HomeController extends Controller {
 	public function index()
 	{
 		$user = Auth::user()->name;
-		$data = ['mensaje' => 'esta en el index de home'];
+		$data = ['mensaje' => 'esta en el index de asasasahome'];
 		return view('contact', $data);
 	}
 	

@@ -3,6 +3,7 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Post;
 use Illuminate\Http\Request;
 
 class PostsController extends Controller {
@@ -32,9 +33,14 @@ class PostsController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(Request $request)
 	{
-		//
+		$post = new Post($request->all());
+        $post->save();
+
+        return (redirect()->back());
+
+
 	}
 
 	/**
