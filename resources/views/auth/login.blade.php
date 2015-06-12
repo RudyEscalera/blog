@@ -1,12 +1,36 @@
 @extends('app')
 
 @section('content')
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-md-8 col-md-offset-2">
-			<div class="panel panel-default">
-				<div class="panel-heading">Login</div>
-				<div class="panel-body">
+<head>
+	<style >
+	body{
+            background-image: url("rino.jpg");
+            background-size: cover;
+            background-repeat: repeat;
+
+        }
+        #iniciar_secion, #registrarse{
+            width: 350px;
+            /*height: 360px;*/
+            margin-top: 5%;
+            margin-right: 5%;
+            padding: 15px;
+            border-radius: 12px;
+            opacity: 0.8;
+
+        }
+        #iniciar_secion{
+            float: right;
+            background-color: #c7ddef;
+
+        }
+        #registrarse{
+            /*clear: both;*/
+            float: right;
+            background-color: #f7ecb5;
+        }</style>
+</head>
+<div id="iniciar_secion">
 					@if (count($errors) > 0)
 						<div class="alert alert-danger">
 							<strong>Whoops!</strong> There were some problems with your input.<br><br>
@@ -53,9 +77,5 @@
 							</div>
 						</div>
 					</form>
-				</div>
-			</div>
-		</div>
 	</div>
-</div>
 @endsection
