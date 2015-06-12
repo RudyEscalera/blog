@@ -13,13 +13,14 @@ use User;
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+Route::get('/', 'HomeController@index');
 Route::get('home', 'HomeController@index');
 Route::get('/{id}', function ($id) {
    		 $user = \DB::table('users')->where('username' ,$id)->get();
-   		 return $user;
+		return $user;
 		/*$data = ['mensaje' => 'probando perfil'];
-		return view('contact', $data);*/
+
+		return view('contact',$data);*/
 });
 Route::resource('articles','ArticlesController');
 Route::resource('movies','MoviesController');
