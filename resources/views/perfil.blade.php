@@ -3,7 +3,12 @@
 @section('title', 'Hola mundo')
 
 @section('content')
+	<p>perfil</p>
 	<div class="fondoguest">
-		<p>{{$mensaje}}</p>
 		</div>
+		@foreach ($users as $user)
+		{{$user->username}}
+		
+		
+	@endforeach
 @stop

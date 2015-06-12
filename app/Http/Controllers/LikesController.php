@@ -38,7 +38,7 @@ class LikesController extends Controller {
 		$input = $request->all();
 		$like = new Like($input);
 		Auth::user()->likes()->save($like);
-		return redirect('movies');
+		return redirect('/');
 	}
 
 	/**
@@ -84,7 +84,7 @@ class LikesController extends Controller {
 	{
 		$like =Like::find($id);
 		$like->delete();
-		return redirect('movies');
+		return redirect('/');
 	}
 
 }

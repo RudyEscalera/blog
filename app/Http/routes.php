@@ -15,9 +15,7 @@ Route::get('/', 'HomeController@index');
 Route::get('home', 'HomeController@index');
 Route::get('/{id}', function ($id) {
    		 $users = \DB::table('users')->where('username' ,$id)->get();
-		$data = ['mensaje' => 'probando perfil'];
-
-		return view('contact',$data,compact('users'));
+		return view('perfil',compact('users'));
 });
 Route::resource('articles','ArticlesController');
 Route::resource('movies','MoviesController');
