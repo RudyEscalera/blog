@@ -35,12 +35,6 @@ class HomeController extends Controller {
 		$data = ['mensaje' => 'esta en el index de home'];
 		return view('contact', $data);
 	}
-	public function perfil($id)
-	{
-		$user = Auth::find($id);
-		$data = ['mensaje' => $user()->name];
-		return view('contact', $data);
-
-	}
+	
 
 }
